@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram bot 'Torrents'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/dir/to/bot
+ExecStart=/usr/bin/python3 /dir/to/bot/torrents.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
+
